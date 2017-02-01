@@ -4,6 +4,6 @@
     <form action="{% url 'declaration:form' %}" method="post">
         {% csrf_token %}
         {{ form }}
-        <button type="submit">Yes</button>
+        <button type="submit" name="declaration" value="yes">I confirm I am a HCP</button>
     </form>
 </div>
