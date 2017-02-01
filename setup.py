@@ -17,7 +17,7 @@ setup(
     url='https://github.com/incuna/django-declaration-middleware',
     license='BSD',
     classifiers=[
-        'Development Status :: 2',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
