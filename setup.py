@@ -15,6 +15,7 @@ setup(
     author='Incuna Ltd',
     author_email='admin@incuna.com',
     url='https://github.com/incuna/django-declaration-middleware',
+    license='BSD',
     classifiers=[
         'Development Status :: 2',
         'Environment :: Web Environment',
