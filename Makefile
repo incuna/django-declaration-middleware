@@ -15,7 +15,7 @@ release:
 	@python setup.py register sdist bdist_wheel upload
 
 test:
-	@coverage run test_project/manage.py test TODO_PACKAGE_NAME --verbosity=${VERBOSITY}
+	@coverage run test_project/manage.py test declaration --verbosity=${VERBOSITY}
 	@flake8 .
 	@DJANGO_SETTINGS_MODULE=test_project.settings coverage report
 
@@ -26,7 +26,7 @@ migrations:
 	@test_project/manage.py makemigrations
 
 migrate:
-	@if [ `psql -t -c "SELECT COUNT(1) FROM pg_catalog.pg_database WHERE datname = 'TODO_PACKAGE_NAME'"` -eq 0 ]; then \
-		psql -c "CREATE DATABASE TODO_PACKAGE_NAME"; \
+	@if [ `psql -t -c "SELECT COUNT(1) FROM pg_catalog.pg_database WHERE datname = 'declaration'"` -eq 0 ]; then \
+		psql -c "CREATE DATABASE declaration"; \
 	fi
 	@test_project/manage.py migrate

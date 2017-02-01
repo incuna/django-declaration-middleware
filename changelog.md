@@ -1,4 +1,4 @@
-# Changelog for TODO_PROJECT_NAME
+# Changelog for django-declaration-middleware
 
 This project uses Semantic Versioning (2.0).
 

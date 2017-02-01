@@ -7,20 +7,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = True
 ALLOWED_HOSTS = []
-ROOT_URLCONF = 'TODO_PACKAGE_NAME.tests.urls'
+ROOT_URLCONF = 'declaration.tests.urls'
 STATIC_URL = '/static/'
 
 SECRET_KEY = 'not-for-production'
 PASSWORD_HASHERS = ('django.contrib.auth.hashers.MD5PasswordHasher',)
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost/TODO_PACKAGE_NAME')
+    'default': dj_database_url.config(default='postgres://localhost/declaration')
 }
 DEFAULT_FILE_STORAGE = 'inmemorystorage.InMemoryStorage'
 
 INSTALLED_APPS = (
-    'TODO_PACKAGE_NAME',
-    'TODO_PACKAGE_NAME.tests',
+    'declaration',
+    'declaration.tests',
 
     # Work around 'relation does not exist' errors by ordering the installed apps:
     #   contenttypes -> auth -> everything else.
