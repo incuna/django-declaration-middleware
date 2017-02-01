@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = True
 ALLOWED_HOSTS = []
-ROOT_URLCONF = 'declaration.tests.urls'
+ROOT_URLCONF = 'test_project.urls'
 STATIC_URL = '/static/'
 
 SECRET_KEY = 'not-for-production'
@@ -20,7 +20,8 @@ DEFAULT_FILE_STORAGE = 'inmemorystorage.InMemoryStorage'
 
 INSTALLED_APPS = (
     'declaration',
-    'declaration.tests',
+
+    'crispy_forms',
 
     # Work around 'relation does not exist' errors by ordering the installed apps:
     #   contenttypes -> auth -> everything else.
@@ -37,6 +38,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
+
+# Crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+PROTECTED_URL_PATTERNS = []
 
 TEMPLATES = [
     {
