@@ -1,5 +1,9 @@
 from setuptools import find_packages, setup
 
+description = (
+    'Django application to force users to accept' +
+    'a declaration before accessing a set of urls'
+)
 
 setup(
     version='0.1.0',
@@ -7,7 +11,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[],
-    description='Django application to force users to accept a declaration before accessing a set of urls',
+    description=description,
     author='Incuna Ltd',
     author_email='admin@incuna.com',
     url='https://github.com/incuna/django-declaration-middleware',
